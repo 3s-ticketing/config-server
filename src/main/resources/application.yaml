@@ -11,3 +11,12 @@ spring:
         git:
           uri: https://github.com/3s-ticketing/config-repo
           default-label: main
+
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
